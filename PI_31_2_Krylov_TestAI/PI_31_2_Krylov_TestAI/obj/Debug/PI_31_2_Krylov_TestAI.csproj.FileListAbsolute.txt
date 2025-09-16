@@ -1,0 +1,10 @@
+C:\Users\s0188304\source\repos\PI_31_2_Krylov_TestAI\PI_31_2_Krylov_TestAI\bin\Debug\PI_31_2_Krylov_TestAI.exe.config
+C:\Users\s0188304\source\repos\PI_31_2_Krylov_TestAI\PI_31_2_Krylov_TestAI\bin\Debug\PI_31_2_Krylov_TestAI.exe
+C:\Users\s0188304\source\repos\PI_31_2_Krylov_TestAI\PI_31_2_Krylov_TestAI\bin\Debug\PI_31_2_Krylov_TestAI.pdb
+C:\Users\s0188304\source\repos\PI_31_2_Krylov_TestAI\PI_31_2_Krylov_TestAI\obj\Debug\PI_31_2_Krylov_TestAI.csproj.AssemblyReference.cache
+C:\Users\s0188304\source\repos\PI_31_2_Krylov_TestAI\PI_31_2_Krylov_TestAI\obj\Debug\PI_31_2_Krylov_TestAI.Form1.resources
+C:\Users\s0188304\source\repos\PI_31_2_Krylov_TestAI\PI_31_2_Krylov_TestAI\obj\Debug\PI_31_2_Krylov_TestAI.Properties.Resources.resources
+C:\Users\s0188304\source\repos\PI_31_2_Krylov_TestAI\PI_31_2_Krylov_TestAI\obj\Debug\PI_31_2_Krylov_TestAI.csproj.GenerateResource.cache
+C:\Users\s0188304\source\repos\PI_31_2_Krylov_TestAI\PI_31_2_Krylov_TestAI\obj\Debug\PI_31_2_Krylov_TestAI.csproj.CoreCompileInputs.cache
+C:\Users\s0188304\source\repos\PI_31_2_Krylov_TestAI\PI_31_2_Krylov_TestAI\obj\Debug\PI_31_2_Krylov_TestAI.exe
+C:\Users\s0188304\source\repos\PI_31_2_Krylov_TestAI\PI_31_2_Krylov_TestAI\obj\Debug\PI_31_2_Krylov_TestAI.pdb
