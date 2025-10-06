@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{543038E2-20B1-488F-90E2-896E295E979C}</ProjectGuid>
+    <ProjectGuid>{7F6533B8-81F9-4A5C-92B5-2516AE80FAB7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PI_31_2_Krylov_TestAI</RootNamespace>
     <AssemblyName>PI_31_2_Krylov_TestAI</AssemblyName>
@@ -52,6 +52,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NeuroNet\HiddenLayer.cs" />
+    <Compile Include="NeuroNet\InputLayer.cs" />
+    <Compile Include="NeuroNet\Layer.cs" />
+    <Compile Include="NeuroNet\ModeleEnums.cs" />
+    <Compile Include="NeuroNet\Network.cs" />
+    <Compile Include="NeuroNet\Neuron.cs" />
+    <Compile Include="NeuroNet\OutputLayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

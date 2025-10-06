@@ -14,13 +14,13 @@ namespace PI_31_2_Krylov_TestAI
     public partial class Form1 : Form
     {
         public double[] inputPixels;
-        //Конструктор
         public Form1()
         {
             InitializeComponent();
 
             inputPixels = new double[15];
         }
+
         private void Changing_State_Pixel_Button_Click(object sender, EventArgs e)
         {
             if (((Button)sender).BackColor == Color.White)
@@ -34,7 +34,20 @@ namespace PI_31_2_Krylov_TestAI
                 inputPixels[((Button)sender).TabIndex] = 0d;
             }
         }
-        private void button_SaveTrainSample_Click(object sender)
-    }
+        private void button_SaveSample_Click(object sender, EventArgs e)
+        {
+            string name = ((Button)sender).Name == "SaveTrainSample" ? "train.txt" : "test.txt";
+            string path = AppDomain.CurrentDomain.BaseDirectory + name;
+            string tmpStr = numericUpDown_NecessaryOutput.Value.ToString();
 
+            for (int i = 0; i < inputPixels.Length; i++)
+            {
+                tmpStr += " " + inputPixels[i].ToString();
+            }
+            tmpStr += "\n";
+
+            File.AppendAllText(path, tmpStr);
+        }
+
+    }
 }
