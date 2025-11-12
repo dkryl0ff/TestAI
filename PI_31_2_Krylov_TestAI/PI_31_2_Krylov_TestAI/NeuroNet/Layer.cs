@@ -18,8 +18,8 @@ namespace PI_31_2_Krylov_TestAI.NeuroNet
         string pathFileWeights;
         protected int numofneurons;
         protected int numofprevneurons;
-        protected const double learningrate = 0.060;
-        protected const double momentum = 0.050d;
+        protected const double learningrate = 0.001;
+        protected const double momentum = 0d;
         protected double[,] lastdeltaweights;
         protected Neuron[] neurons;
 
@@ -118,5 +118,9 @@ namespace PI_31_2_Krylov_TestAI.NeuroNet
 
             return weights;
         }
+
+        abstract public void Recognize(Network net, Layer nextLayer);//для прямых проходов
+
+        abstract public double[] BackwardPass(double[] stuff);//обратные 
     }
 }

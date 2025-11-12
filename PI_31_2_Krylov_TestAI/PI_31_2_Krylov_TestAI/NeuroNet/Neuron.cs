@@ -1,6 +1,5 @@
 ﻿using static System.Math;
 
-
 namespace PI_31_2_Krylov_TestAI.NeuroNet
 {
     class Neuron
@@ -12,10 +11,10 @@ namespace PI_31_2_Krylov_TestAI.NeuroNet
         private double output;
         private double derivative;
 
-        //константы для функции активации(заменить под гиперболический тангенс)
-        private double a = 1.00d;
+        //константы для функции активации
+        private double a = 1d;
 
-        //Cвойства
+        //Свойства
         public double[] Weights { get => weights; set => weights = value; }
         public double[] Inputs { get => inputs; set => inputs = value; }
         public double Output { get => output; }
@@ -27,14 +26,14 @@ namespace PI_31_2_Krylov_TestAI.NeuroNet
             type = typeNeuron;
             weights = memoryWeights;
         }
-        
+
         //метод активации нейрона
         public void Activator(double[] i)
         {
             inputs = i;
-            double sum = weights[0];
+            double sum = weights[0]; // bias weight
 
-            for(int j = 0; j < inputs.Length; j++)
+            for (int j = 0; j < inputs.Length; j++)
             {
                 sum += inputs[j] * weights[j + 1];
             }
@@ -43,31 +42,27 @@ namespace PI_31_2_Krylov_TestAI.NeuroNet
             {
                 case NeuronType.Hidden:
                     output = Tanh(sum);
-                    derivative = TanhDerivative(sum);
+                    derivative = TanhDerivative(output); // Исправлено: передаем output, а не sum
                     break;
 
                 case NeuronType.Output:
+                    // Для выходного слоя лучше использовать Softmax (будет вычисляться на уровне слоя)
+                    // Или сигмоиду для бинарной классификации
                     output = Exp(sum);
                     break;
             }
-
-            
-            //обращение к функции активации также заменить под свою функцию активации для output все одинаковое
-
-            //функция активации
-
-            //производная
-            
         }
+
+        // Гиперболический тангенс
         private double Tanh(double x)
         {
-            return Tanh(a * x);
+            return System.Math.Tanh(a * x);
         }
 
         // Производная гиперболического тангенса
-        private double TanhDerivative(double output)
+        private double TanhDerivative(double x)
         {
-            return a * (1 - output * output);
+            return a * (1 - x * x);
         }
     }
 }
