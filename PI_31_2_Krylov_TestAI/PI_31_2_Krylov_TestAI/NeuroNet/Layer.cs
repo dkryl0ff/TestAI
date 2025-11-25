@@ -18,13 +18,13 @@ namespace PI_31_2_Krylov_TestAI.NeuroNet
         string pathFileWeights;
         protected int numofneurons;
         protected int numofprevneurons;
-        protected const double learningrate = 0.001;
-        protected const double momentum = 0d;
+        protected const double learningrate = 0.0644;
+        protected const double momentum = 0.05d;
         protected double[,] lastdeltaweights;
         protected Neuron[] neurons;
 
-
         public Neuron[] Neurons { get => neurons; set => neurons = value; }
+
         public double[] Data
         {
             set
@@ -59,13 +59,19 @@ namespace PI_31_2_Krylov_TestAI.NeuroNet
             for (int i = 0; i < non; i++)
             {
                 double[] tmp_weights = new double[nopn + 1];
-                for (int j = 0; j < nopn; j++)
+                for (int j = 0; j < nopn + 1; j++)
                 {
                     tmp_weights[j] = Weights[i, j];
+                    Neurons[i] = new Neuron(tmp_weights, nt);
                 }
-                Neurons[i] = new Neuron(tmp_weights, nt);
             }
+
         }
+
+        // 1 - все синоптические веса должны быть случайными величинами
+        // 2 - для каждого нейрона мат. ожидание случайных величин должно равняться 0
+        // 3 - среднеквадратическое отклонение должно равняться 1
+
 
         public double[,] WeightInitialize(MemoryMode mm, string path)
         {
@@ -119,8 +125,9 @@ namespace PI_31_2_Krylov_TestAI.NeuroNet
             return weights;
         }
 
-        abstract public void Recognize(Network net, Layer nextLayer);//для прямых проходов
+        abstract public void Recognize(Network net, Layer nextLayer); // для прямых проходов
+        abstract public double[] BackwardPass(double[] stuff); // для обратных
 
-        abstract public double[] BackwardPass(double[] stuff);//обратные 
+
     }
 }

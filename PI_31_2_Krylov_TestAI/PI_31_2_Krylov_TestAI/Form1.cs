@@ -87,5 +87,15 @@ namespace PI_31_2_Krylov_TestAI
         {
 
         }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            network.Test(network);
+
+            for (int i = 0; i < network.E_error_avr.Length; i++)
+            {
+                chart_Eavr.Series[0].Points.AddY(network.E_error_avr[i]);
+            }
+        }
     }
 }

@@ -55,6 +55,7 @@ namespace PI_31_2_Krylov_TestAI
             this.label_Probability = new System.Windows.Forms.Label();
             this.button_Training = new System.Windows.Forms.Button();
             this.chart_Eavr = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button_Test = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_NecessaryOutput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Eavr)).BeginInit();
             this.SuspendLayout();
@@ -296,11 +297,22 @@ namespace PI_31_2_Krylov_TestAI
             this.chart_Eavr.Titles.Add(title1);
             this.chart_Eavr.Click += new System.EventHandler(this.chart1_Click);
             // 
+            // button_Test
+            // 
+            this.button_Test.Location = new System.Drawing.Point(132, 153);
+            this.button_Test.Name = "button_Test";
+            this.button_Test.Size = new System.Drawing.Size(75, 35);
+            this.button_Test.TabIndex = 23;
+            this.button_Test.Text = "Тест";
+            this.button_Test.UseVisualStyleBackColor = true;
+            this.button_Test.Click += new System.EventHandler(this.button16_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 459);
+            this.Controls.Add(this.button_Test);
             this.Controls.Add(this.chart_Eavr);
             this.Controls.Add(this.button_Training);
             this.Controls.Add(this.label_Probability);
@@ -359,6 +371,7 @@ namespace PI_31_2_Krylov_TestAI
         private System.Windows.Forms.Label label_Probability;
         private System.Windows.Forms.Button button_Training;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_Eavr;
+        private System.Windows.Forms.Button button_Test;
     }
 }
 
